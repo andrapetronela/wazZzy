@@ -65,27 +65,14 @@ body {
 
 #hero h1 {
     color: #e5e5e5;
-    height: 1vh;
-    font-size: 2vw;
     font-weight: 300;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-
-@keyframes sunshine {
-    0% {
-        width: 0rem;
-    }
-    100% {
-        width: 12rem;
-    }
+    display: block;
+    text-align: center;
+    position: relative;
 }
 
 .sleep-icon {
-    font-size: 3vw;
+    font-size: 1.5rem;
     margin: 1rem;
     vertical-align: middle;
     color: #b73e3e;
@@ -109,7 +96,6 @@ body {
     position: relative;
     top: 85vh;
     display: flex;
-    max-width: 70vw;
     justify-content: center;
     align-content: center;
     margin: auto;
@@ -211,7 +197,6 @@ h2::after {
     margin: 2rem;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.3vw;
 }
 
 #social-media {
@@ -310,7 +295,6 @@ footer a {
         width: 70vw;
     }
      #form {
-        flex-wrap: wrap;
         top: 70vh;
     }
     h2 {
@@ -333,6 +317,10 @@ footer a {
     }
     iframe {
         width: 90vw;
+    }
+    h1 {
+        width: 100vw;
+        margin: 0 auto;
     }
 }
 
