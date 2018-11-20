@@ -13,21 +13,17 @@ body {
 #header {
     color: #e5e5e5;
     background-color: #1d0e07;
-}
-
-#header-img {
-    max-width: 4vw;
-    height: auto;
-    padding: .3rem;
-    border-radius: 50px;
-    position: relative;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
     z-index: 5;
 }
 
-#header p {
-    color: rgba(230, 230, 230, 0.52);
-    font-size: .8rem;
-    display: inline;
+#header-img {
+    width: 7vh;
+    height: auto;
+    padding: .3rem;
+    border-radius: 50px;
     position: relative;
     z-index: 5;
 }
@@ -37,10 +33,9 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
-    position: fixed;
     background-color: #1d0e07;
 }
 
@@ -64,7 +59,7 @@ body {
 }
 
 #hero {
-    height: 90vh;
+    height: 100vh;
     background-color: #1d0e07;
 }
 
@@ -74,39 +69,10 @@ body {
     font-size: 2vw;
     font-weight: 300;
     position: absolute;
-    top: 20%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
-}
-
-#hero h1::before {
-    content: "";
-    display: block;
-    height: 10rem;
-    width: 12rem;
-    border-radius: 50%;
-    background-color: #d9981d;
-    position: relative;
-    top: 15vh;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -5;
-    transition: all .5s;
-    animation: sunshine 3s linear 1 alternate;
-}
-
-#hero h1::after {
-    content: "";
-    display: block;
-    height: 15rem;
-    width: 13rem;
-    border-radius: 50%;
-    background-color: #1d0e07;
-    margin: auto;
-    position: relative;
-    top: -21vh;
-    z-index: -5;
 }
 
 @keyframes sunshine {
@@ -141,21 +107,21 @@ body {
 
 #form {
     position: relative;
-    top: 65vh;
+    top: 85vh;
     display: flex;
-    width: 70vw;
+    max-width: 70vw;
     justify-content: center;
+    align-content: center;
     margin: auto;
 }
 
 #email {
-    height: 2rem;
-    width: 14rem;
+    width: auto;
+    height: 2.5rem;
+    padding: 0 1rem;
     border: none;
-    padding: 1.2rem;
     background-color: hsl(19, 61%, 15%);
     color: hsl(0, 0%, 70%);
-    vertical-align: middle;
     margin-right: 1rem;
     transition: all .3s;
 }
@@ -163,11 +129,12 @@ body {
 ::placeholder {
     color: hsl(0, 0%, 60%);
     letter-spacing: 1px;
+    text-align: center;
 }
 
 #submit {
     height: 2.5rem;
-    padding: 0 2rem;
+    padding: 0 2vw;
     line-height: 2.5rem;
     cursor: pointer;
     background-color: #1d0e07;
@@ -270,6 +237,7 @@ h2::after {
 
 iframe {
     display: block;
+    width: 50vw;
     margin: 0 auto 5rem;
 }
 
@@ -308,13 +276,7 @@ footer a {
         z-index: 5;
     }
 
-    #header {
-        position: fixed;
-    }
     #header-img {
-        z-index: 6;
-    }
-    #header p {
         z-index: 6;
     }
     .card {
@@ -347,15 +309,30 @@ footer a {
     .products-container {
         width: 70vw;
     }
+     #form {
+        flex-wrap: wrap;
+        top: 70vh;
+    }
+    h2 {
+        margin: 2rem;
+    }
 }
 
 @media only screen and (max-width: 560px) {
-    #nav-bar a:link,
-    #nav-bar a:visited {
-        width: 4rem;
+    #nav-bar {
+        right: .5em;
     }
-    #hero h1 {
-        font-size: 3vw;
+    .card {
+        width: 100vw;
+    }
+    .products-container {
+        width: 95vw;
+    }
+    .product-card p {
+        padding: 0 1rem 2rem;
+    }
+    iframe {
+        width: 90vw;
     }
 }
 
