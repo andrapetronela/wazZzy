@@ -22,8 +22,12 @@ body {
 #header-img {
     width: 7vh;
     height: auto;
+    vertical-align: middle;
     border-radius: 50px;
     position: relative;
+    top: .5%;
+    left: .5%;
+    padding: .1rem;
     z-index: 5;
 }
 
@@ -303,9 +307,6 @@ footer a {
 }
 
 @media only screen and (max-width: 560px) {
-    #nav-bar {
-        right: .5em;
-    }
     .card {
         width: 100vw;
     }
