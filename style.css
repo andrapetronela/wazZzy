@@ -26,7 +26,7 @@ body {
     height: max-content;
     position: fixed;
     z-index: 5;
-    clip-path: polygon(100% 0, 100% 0, 100% 70%, 50% 40%, 0 70%, 0 0);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 40%, 0 100%, 0 0);
 }
 
 #header-img {
@@ -35,8 +35,6 @@ body {
     border-radius: 50px;
     position: relative;
     top: -4%;
-/*    left: .5%;*/
-/*    padding: .1rem;*/
     z-index: 5;
 }
 
@@ -310,7 +308,24 @@ footer a {
     color: #1da1f2;
 }
 
+@media only screen and (min-width: 1500px) {
+    #hero {
+        clip-path: polygon(100% 0, 100% 85%, 2% 100%, 0 100%, 0 0);
+    }
+}
+
 @media only screen and (max-width: 1060px) {
+    #hero-img {
+        right: 2rem;
+        top: 10rem;
+        padding: 2rem;
+    }
+    
+    #hero-text {
+        left: 5rem;
+        width: 40vw;
+    }
+    
     #nav-bar {
         z-index: 5;
     }
@@ -328,22 +343,12 @@ footer a {
     .img-container {
         height: 30vh;
     }
-    #hero h1::before {
-    display: none;
-    }
-
-    #hero h1::after {
-        display: none;
-    }
-    #hero h1 {
-        top: 40%;
-    }
 }
 
 @media only screen and (max-width: 850px) {
-    #nav-bar a:link,
-    #nav-bar a:visited {
-        width: 5rem;
+    #nav-bar {
+        width: 100%;
+        padding: 1rem;
     }
     .products-container {
         width: 70vw;
@@ -357,6 +362,22 @@ footer a {
 }
 
 @media only screen and (max-width: 560px) {
+    #hero {
+        clip-path: polygon(100% 0, 100% 90%, 2% 100%, 0 100%, 0 0);
+    }
+    
+    #hero-img {
+        right: 2rem;
+        top: 15rem;
+        padding: 2rem;
+    }
+    
+    #nav-bar a:link,
+    #nav-bar a:visited {
+        padding: .8rem .5rem;
+        width: 5.5rem;
+    }
+    
     .card {
         width: 100vw;
     }
@@ -369,9 +390,5 @@ footer a {
     iframe {
         width: 70vw;
         height: 60%;
-    }
-    h1 {
-        width: 100vw;
-        margin: 0 auto;
     }
 }
