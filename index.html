@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,700|Playfair+Display:400,700|Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -19,30 +19,33 @@
     <header id="header">
             <img id="header-img" src="logo.jpg" alt="company-logo">
             <nav id="nav-bar">
+                <a href="#hero" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
     </header>
     <section id="hero">
-       <h1><i class="far fa-flushed sleep-icon"></i>Be WazZzy!<i class="far fa-grin-alt sleep-icon" id="smile-icon"></i></h1>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input name="email" id="email" type="email" placeholder="Email address" required/>
-        <input id="submit" type="submit" value="Subscribe" />
-      </form>
+       <img src="undraw_alien_science_nonm.svg" alt="women working late" id="hero-img">
+       <div id="hero-text">
+          <h1>Brought from the other side</h1>
+           <p>Explore our potion and get the coffee you deserve to show off your smile all day.</p>
+           <a href="#about" id="cta-btn">Discover more</a>
+           
+       </div>
     </section>
     <section id="about">
       <h2>Your favorite coffee</h2>
        <div class="card">
-           <i class="fas fa-user-astronaut astronaut-icon"></i>
+           <i class="fas fa-user-astronaut astronaut-icon about-icon"></i>
            <p>Over 70.000 wazZzers are happy when they hear their morning alarm sound. You could start your day wearing a smile, too.</p>
        </div>
        <div class="card">
-           <i class="far fa-calendar-check calendar-icon"></i>
+           <i class="far fa-calendar-check calendar-icon about-icon"></i>
            <p>WazZzy coffee provides enough energy to last until the next cup, so you can finish all your tasks in a blink of an eye.</p>
        </div> 
        <div class="card">
-           <i class="fas fa-cut cut-icon"></i>
+           <i class="fas fa-cut cut-icon about-icon"></i>
            <p>We've cut the price and now you can pay as you sip. There is no need to rush.</p>
        </div>    
     </section>
@@ -50,38 +53,36 @@
        <h2>Got a nose for the match?</h2>
        <div class="products-container">
             <div class="product-card" id="card-1">
+                <div class="img-container">
+                </div>
                 <h4>Night owl</h4>
                 <p>We know some people prefer to spend the night in a different way... Not our business, but we would love to see these night owls smiling during the day, too...</p>
-                <div class="img-container">
-                    <img src="coffee3.jpg" alt="coffee">
-                </div>
+                
             </div>
             <div class="product-card" id="card-2">
-                <h4>Coffee time</h4>
-                <p>Do you enjoy drinking a cup of coffee, no matter the time of the day? WazZzy coffee is right on time!</p>
                 <div class="img-container">
-                    <img src="coffee5.jpg" alt="coffee">
                 </div>
+                <h4>Coffee time</h4>
+                <p>Do you enjoy drinking a cup of coffee, no matter the time of the day? WazZzy coffee is right on time! Of course, you should not ignore your morning alarm.</p>
+                
             </div>
             <div class="product-card" id="card-3">
+                <div class="img-container">
+                </div>
                 <h4>Back to tradition</h4>
                 <p>Some people are nostalgic and the studies have proven that they tend to be happier after they see the cup half empty.</p>
-                <div class="img-container">
-                    <img src="coffee2.jpg" alt="coffee">
-                </div>
-            </div>
-            <div class="product-card" id="card-5">
-                <h4 id="social-media">Social media</h4>
-                <p>Enjoy the time spent with your friends without checking your social media accounts. It will give you superpowers. </p>
-                <div class="img-container">
-                    <img src="coffee1.jpg" alt="coffee">
-                </div>
+                
             </div>
        </div>
         
     </section>
-    <section>
-        <h2>wazZze yourself!</h2>
+    <section id="subscribe-container">
+       <h2>wazZze yourself!</h2>
+       <p>Subscribe to our newsletter if you want to find out when our coffee gets delivered.</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input name="email" id="email" type="email" placeholder="Email address" required/>
+            <input id="submit" type="submit" value="Subscribe" />
+        </form>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/4YOwEqGykDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
     <footer id="contact">
@@ -95,5 +96,6 @@
             </a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
