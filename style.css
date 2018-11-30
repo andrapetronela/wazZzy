@@ -243,7 +243,6 @@ h2::after {
 }
 
 #email {
-    width: auto;
     height: 2.5rem;
     padding: 0 1rem;
     border: none;
@@ -351,33 +350,19 @@ footer a {
     .img-container {
         height: 30vh;
     }
+    
+    #subscribe-container p {
+        padding: 2rem;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 850px) {
-    #nav-bar {
-        width: 100%;
-        padding: 1rem;
-    }
-    .products-container {
-        width: 50vw;
-    }
-     #form {
-        top: 70vh;
-    }
-    h2 {
-        margin: 2rem;
-    }
-    iframe {
-        height: 60%;
-    }
-}
-
-@media only screen and (max-width: 650px) {
     #hero {
-        clip-path: polygon(100% 0, 100% 90%, 2% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 100% 95%, 0% 100%, 0 100%, 0 0);
+        height: 105vh;
     }
-    
-    #hero-img {
+     #hero-img {
         left: 50vw;
         top: 58vh;
         transform: translateX(-50%);
@@ -391,6 +376,22 @@ footer a {
         left: 0;
         width: 60vw;
     }
+    #nav-bar {
+        width: 100%;
+        padding: 1rem;
+    }
+    .products-container {
+        width: 50vw;
+    }
+    h2 {
+        margin: 2rem;
+    }
+    iframe {
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 650px) {   
     .products-container {
         width: 70vw;
     }
@@ -433,5 +434,13 @@ footer a {
     #hero-img {
         top: 70vh;
         padding: 0;
+    }
+    #form {
+        flex-direction: column;
+        margin: 0 3rem 3rem;
+    }
+    #email {
+        margin-right: 0;
+        transition: all .3s;
     }
 }
