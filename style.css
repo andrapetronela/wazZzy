@@ -444,3 +444,10 @@ footer a {
         transition: all .3s;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    #hero-text {
+        width: 80%;
+        padding-top: 2rem;
+    }
+}
