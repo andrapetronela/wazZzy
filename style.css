@@ -330,15 +330,23 @@ footer a {
         z-index: 5;
     }
 
+    #nav-bar a:hover,
+    #nav-bar a:active {
+        background-color: var(--light-purple);
+        color: var(--heading-text);
+    }
     #header-img {
         z-index: 6;
     }
     .card {
-        width: 70vw;
+        width: 60vw;
     }
     .products-container {
-        width: 50vw;
+        width: 40vw;
         display: block;
+    }
+    .product-card {
+        margin: 3rem 2rem;
     }
     .img-container {
         height: 30vh;
@@ -351,7 +359,7 @@ footer a {
         padding: 1rem;
     }
     .products-container {
-        width: 70vw;
+        width: 50vw;
     }
      #form {
         top: 70vh;
@@ -359,36 +367,71 @@ footer a {
     h2 {
         margin: 2rem;
     }
+    iframe {
+        height: 60%;
+    }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 650px) {
     #hero {
         clip-path: polygon(100% 0, 100% 90%, 2% 100%, 0 100%, 0 0);
     }
     
     #hero-img {
-        right: 2rem;
-        top: 15rem;
-        padding: 2rem;
+        left: 50vw;
+        top: 58vh;
+        transform: translateX(-50%);
+        width: 50vw;
+        padding: 1rem;
     }
     
+    #hero-text {
+        top: 38vh;
+        margin: 0 auto;
+        left: 0;
+        width: 60vw;
+    }
+    .products-container {
+        width: 70vw;
+    }
+    .product-card {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #hero-img {
+        top: 62vh;
+    }
     #nav-bar a:link,
     #nav-bar a:visited {
         padding: .8rem .5rem;
         width: 5.5rem;
     }
     
-    .card {
+    .card:not(:first-child) {
         width: 100vw;
+        margin: 0 auto;
     }
     .products-container {
         width: 95vw;
     }
+    .product-card {
+        width: 80vw;
+    }
     .product-card p {
         padding: 0 1rem 2rem;
     }
-    iframe {
-        width: 70vw;
-        height: 60%;
+}
+@media only screen and (max-width: 455px) {
+    #header {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
+    }
+    #header-img {
+        display: none;
+    }    
+    #hero-img {
+        top: 70vh;
+        padding: 0;
     }
 }
