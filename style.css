@@ -451,3 +451,9 @@ footer a {
         padding-top: 2rem;
     }
 }
+
+@media only screen and (min-height: 1120px) {
+    #nav-bar {
+        justify-content: space-around;
+    }
+}
