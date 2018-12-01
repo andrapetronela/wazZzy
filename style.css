@@ -443,6 +443,9 @@ footer a {
         margin-right: 0;
         transition: all .3s;
     }
+    iframe {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 350px) {
