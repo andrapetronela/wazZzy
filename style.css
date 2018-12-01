@@ -63,20 +63,27 @@ body {
     letter-spacing: 1px;
     text-align: center;
     transition: all .3s;
+    position: relative;
 }
 
-#nav-bar a:hover,
-#nav-bar a:active {
-    background-color: var(--dark-purple);
-    color: var(--light-purple);
+#nav-bar a:hover::after,
+#nav-bar a:active::after {
+    transform: scaleX(1);
 }
 
-#nav-bar a:last-child {
-    border: 1px solid var(--heading-text);
-}
 
-#nav-bar a:last-child:hover {
-    border: 1px solid var(--dark-purple);
+#nav-bar a::after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    height: 2px;
+    width: 60%;
+    background: var(--dark-purple);
+    transform: scaleX(0);
+    transition: transform .4s,
+                    width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                    background-color .1s; 
 }
 
 #hero {
